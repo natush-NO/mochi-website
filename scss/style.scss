@@ -1,0 +1,218 @@
+@import "_reset.scss";
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+[class*="__container"] {
+  max-width: 1303px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 0 50px 0;
+  position: relative;
+
+  @media (min-width: 950px) {
+    padding: 50px 0;
+  }
+}
+
+.header--margin {
+  margin-bottom: 20px;
+
+  @media (min-width: 900px) {
+    margin-bottom: 50px;
+  }
+}
+
+.items-information {
+  max-width: 30vw;
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px 15px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: 500px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 950px) {
+    max-width: 70vw;
+  }
+}
+
+.items-information__item {
+  background-color: rgba(242, 240, 243, 0.722);
+  box-shadow:
+    1px 1px 15px 3px rgba(255, 255, 255, 1),
+    -1px -1px 15px 3px rgba(255, 255, 255, 1),
+    inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195),
+    inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
+  border-radius: 30%;
+  padding: 15px 10px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: 450px) {
+    padding: 15px;
+  }
+}
+
+// =============================================================================
+.hidden-contact {
+  display: none;
+}
+
+#contacts {
+  z-index: 999;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(242, 240, 243, 0.882);
+
+  box-shadow:
+    1px 1px 15px 3px rgba(255, 255, 255, 1),
+    -1px -1px 15px 3px rgba(255, 255, 255, 1),
+    inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195),
+    inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
+  border-radius: 30%;
+  padding: 30px;
+
+  ::before {
+    content: "x";
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 32px;
+    background-color: #fff;
+    padding: 0 8px 5px 8px;
+    border-radius: 30%;
+    box-shadow:
+      inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195),
+      inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
+  }
+}
+
+// =============================================================================
+.subtitle-mochi {
+  min-height: 100px;
+  writing-mode: vertical-lr;
+  border-radius: 30%;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 25px 10px;
+  background-color: #e4bc8f;
+  position: absolute;
+}
+
+.subtitle-mochi--endlisch {
+  top: 10px;
+  left: 5px;
+  transform: rotate(180deg);
+
+  @media (min-width: 950px) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.subtitle-mochi--arabic {
+  font-weight: 600;
+  top: 10px;
+  right: 5px;
+
+  @media (min-width: 950px) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// =============================================================================
+.page__container--margin {
+  margin-bottom: 50px;
+}
+
+.element-mochi {
+  max-width: 60vw;
+  background-color: rgba(242, 240, 243, 0.722);
+
+  box-shadow:
+    1px 1px 15px 3px rgba(255, 255, 255, 1),
+    -1px -1px 15px 3px rgba(255, 255, 255, 1),
+    inset 1px 1px 15px 1px rgba(228, 188, 143, 0.195),
+    inset -1px -1px 15px 1px rgba(228, 188, 143, 0.195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 30%;
+  padding: 30px 0;
+
+  @media (min-width: 900px) {
+    padding: 40px 0;
+  }
+
+  @media (min-width: 1300px) {
+    padding: 70px 0;
+  }
+}
+
+.element-mochi__title {
+}
+
+.element-mochi__title--englisch {
+  font-size: 7vw;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-shadow:
+    1px 1px rgba(255, 255, 255, 1),
+    -1px -1px rgba(255, 255, 255, 1);
+
+  box-shadow:
+    1px 1px 10px 1px rgba(255, 255, 255, 1),
+    -1px -1px 10px 1px rgba(255, 255, 255, 1),
+    inset 1px 1px 10px 1px rgba(228, 188, 143, 0.195),
+    inset -1px -1px 10px 1px rgba(228, 188, 143, 0.195);
+  border-radius: 30%;
+  padding: 25px;
+}
+
+.element-mochi__title--arabic {
+  font-size: 5vw;
+}
+
+// =============================================================================
+.section-about-me--margin {
+  margin-bottom: 100px;
+}
+
+.section-about-me {
+  line-height: 1.2;
+  text-align: center;
+  background-color: rgba(243, 240, 240, 0.722);
+  padding: 50px;
+}
+
+.title-about-me {
+  font-size: 32px;
+}
+
+.text-about-me {
+  font-size: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
