@@ -30,13 +30,21 @@
   }
 }
 
+.information-nav {
+  text-align: center;
+}
+
+#menu-button {
+  min-width: 70px;
+  padding: 15px;
+}
+
 .items-information {
   max-width: 30vw;
   font-weight: 300;
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-
   flex-direction: row;
   flex-wrap: wrap;
   gap: 25px 15px;
@@ -53,6 +61,20 @@
 }
 
 .items-information__item {
+  min-width: 180px;
+  padding: 15px 10px;
+  margin: 0 auto;
+
+  @media (min-width: 450px) {
+    padding: 15px;
+  }
+}
+
+.items-information__item,
+#menu-button,
+#contacts,
+.element-mochi {
+  text-align: center;
   background-color: rgba(242, 240, 243, 0.722);
   box-shadow:
     1px 1px 15px 3px rgba(255, 255, 255, 1),
@@ -60,19 +82,8 @@
     inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195),
     inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
   border-radius: 30%;
-  padding: 15px 10px;
-  margin: 0 auto;
-  text-align: center;
-
-  @media (min-width: 450px) {
-    padding: 15px;
-  }
 }
-
 // =============================================================================
-.hidden-contact {
-  display: none;
-}
 
 #contacts {
   z-index: 999;
@@ -80,15 +91,6 @@
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-
-  background-color: rgba(242, 240, 243, 0.882);
-
-  box-shadow:
-    1px 1px 15px 3px rgba(255, 255, 255, 1),
-    -1px -1px 15px 3px rgba(255, 255, 255, 1),
-    inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195),
-    inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
-  border-radius: 30%;
   padding: 30px;
 
   ::before {
@@ -147,31 +149,21 @@
 }
 
 .element-mochi {
-  max-width: 60vw;
-  background-color: rgba(242, 240, 243, 0.722);
-
-  box-shadow:
-    1px 1px 15px 3px rgba(255, 255, 255, 1),
-    -1px -1px 15px 3px rgba(255, 255, 255, 1),
-    inset 1px 1px 15px 1px rgba(228, 188, 143, 0.195),
-    inset -1px -1px 15px 1px rgba(228, 188, 143, 0.195);
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  border-radius: 30%;
   padding: 30px 0;
 
   @media (min-width: 900px) {
     padding: 40px 0;
+    max-width: 60vw;
   }
 
   @media (min-width: 1300px) {
     padding: 70px 0;
   }
-}
-
-.element-mochi__title {
 }
 
 .element-mochi__title--englisch {
@@ -216,3 +208,10 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
+// =============================================================================
+
+.hidden {
+  display: none;
+}
+// =============================================================================

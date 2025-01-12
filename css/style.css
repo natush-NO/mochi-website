@@ -99,6 +99,15 @@ body:after {
   }
 }
 
+.information-nav {
+  text-align: center;
+}
+
+#menu-button {
+  min-width: 70px;
+  padding: 15px;
+}
+
 .items-information {
   max-width: 30vw;
   font-weight: 300;
@@ -131,13 +140,9 @@ body:after {
 }
 
 .items-information__item {
-  background-color: rgba(242, 240, 243, 0.722);
-  -webkit-box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
-          box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
-  border-radius: 30%;
+  min-width: 180px;
   padding: 15px 10px;
   margin: 0 auto;
-  text-align: center;
 }
 @media (min-width: 450px) {
   .items-information__item {
@@ -145,8 +150,15 @@ body:after {
   }
 }
 
-.hidden-contact {
-  display: none;
+.items-information__item,
+#menu-button,
+#contacts,
+.element-mochi {
+  text-align: center;
+  background-color: rgba(242, 240, 243, 0.722);
+  -webkit-box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
+          box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
+  border-radius: 30%;
 }
 
 #contacts {
@@ -157,10 +169,6 @@ body:after {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: rgba(242, 240, 243, 0.882);
-  -webkit-box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
-          box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 5px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 5px 1px rgba(228, 188, 143, 0.195);
-  border-radius: 30%;
   padding: 30px;
 }
 #contacts ::before {
@@ -225,10 +233,7 @@ body:after {
 }
 
 .element-mochi {
-  max-width: 60vw;
-  background-color: rgba(242, 240, 243, 0.722);
-  -webkit-box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 15px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 15px 1px rgba(228, 188, 143, 0.195);
-          box-shadow: 1px 1px 15px 3px rgb(255, 255, 255), -1px -1px 15px 3px rgb(255, 255, 255), inset 1px 1px 15px 1px rgba(228, 188, 143, 0.195), inset -1px -1px 15px 1px rgba(228, 188, 143, 0.195);
+  max-width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,12 +245,12 @@ body:after {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  border-radius: 30%;
   padding: 30px 0;
 }
 @media (min-width: 900px) {
   .element-mochi {
     padding: 40px 0;
+    max-width: 60vw;
   }
 }
 @media (min-width: 1300px) {
@@ -288,4 +293,8 @@ body:after {
   font-size: 24px;
   max-width: 800px;
   margin: 0 auto;
+}
+
+.hidden {
+  display: none;
 }

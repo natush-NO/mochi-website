@@ -32,13 +32,14 @@
     <header class="header header--margin" role="banner">
 
       <div class="header__container">
-        <nav class="information" role="navigation">
-          <ul class="items-information">
+        <nav class="information-nav" role="navigation">
+          <button id="menu-button" class="hidden">Menu</button>
+          <ul class="items-information hidden" id="items-information">
             <li class="items-information__item" role="listitem"><a href="#about-me">About me</a></li>
             <li class="items-information__item" role="listitem">About mochi</li>
 
             <li class=" items-information__item" data-js="contact" role="listitem" aria-label="Contact">Contact</li>
-            <div id="contacts" class="hidden-contact" role="contentinfo" aria-labelledby="contacts-header">
+            <div id="contacts" class="hidden" role="contentinfo" aria-labelledby="contacts-header">
               <p>Here are the contacts:</p>
               <ul>
                 <li>Email: example@example.com</li>
@@ -59,8 +60,8 @@
 
       <div class="page__container page__container--margin">
         <div class="element-mochi">
-          <h1 class="element-mochi__title element-mochi__title--englisch" role="heading" aria-level="1">Mochi</h1>
-          <h2 class="element-mochi__title element-mochi__title--arabic" lang="ar" role="heading" aria-level="2">موتشي</h2>
+          <h1 class="element-mochi__title element-mochi__title--englisch" role="heading">Mochi</h1>
+          <h2 class="element-mochi__title element-mochi__title--arabic" lang="ar" role="heading">موتشي</h2>
         </div>
       </div>
 
