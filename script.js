@@ -2,16 +2,14 @@
 
 console.clear();
 
-function toggleClass(element, className) {
-  element.classList.toggle(className);
-}
-
 const menuButton = document.getElementById("menu-button");
 const itemsInformation = document.getElementById("items-information");
+
+const aboutMochiNav = document.getElementById("about-mochi-nav");
+const aboutMochiContainer = document.getElementById("about-mochi-container");
 const aboutMochiDescription = document.getElementById(
   "about-mochi-description"
 );
-const aboutMochiNav = document.getElementById("about-mochi-nav");
 const aboutAssortmentNav = document.getElementById("about-assortment-nav");
 
 const modalOverlay = document.getElementById("modalOverlay");
@@ -60,7 +58,7 @@ const kiwiCard = document.getElementById("kiwi-card");
 const blueberryButton = document.getElementById("blueberry-button");
 const blueberryCard = document.getElementById("blueberry-card");
 
-const strwberryButton = document.getElementById("strawberry-button");
+const strawberryButton = document.getElementById("strawberry-button");
 const strawberryCard = document.getElementById("strawberry-card");
 
 const strawberryMatchaTeaButton = document.getElementById(
@@ -103,8 +101,14 @@ const blueberryLemonCard = document.getElementById("blueberry-lemon-card");
 
 // ==============================================================================
 
+function toggleClass(element, className) {
+  element.classList.toggle(className);
+}
+
+// ==============================================================================
+
 function checkScreenSizeMenu() {
-  if (window.innerWidth <= 950) {
+  if (window.innerWidth <= 768) {
     menuButton.classList.remove("hidden");
     itemsInformation.classList.add("hidden");
   } else {
@@ -115,36 +119,26 @@ function checkScreenSizeMenu() {
 
 if (menuButton && itemsInformation) {
   const menuOpen = () => {
-    toggleClass(itemsInformation, "show");
-    toggleClass(modalOverlay, "show");
-    toggleClass(itemsInformation, "hidden");
-
     if (itemsInformation.classList.contains("show")) {
-      menuButton.textContent = "Close";
-
-      aboutMochiNav.addEventListener(
-        "click",
-        () => {
-          modalOverlay.classList.add("show");
-        },
-        { once: true }
-      );
-      aboutAssortmentNav.addEventListener(
-        "click",
-        () => {
-          itemsInformation.classList.remove("show");
-          modalOverlay.classList.remove("show");
-          menuButton.textContent = "Menu";
-        },
-        { once: true }
-      );
-    } else {
-      menuButton.textContent = "Menu";
+      itemsInformation.classList.remove("show");
       modalOverlay.classList.remove("show");
+      menuButton.textContent = "Menu";
+    } else {
+      itemsInformation.classList.add("show");
+      modalOverlay.classList.add("show");
+      menuButton.textContent = "Close";
     }
   };
 
+  const closeMenu = () => {
+    itemsInformation.classList.remove("show");
+    modalOverlay.classList.remove("show");
+    menuButton.textContent = "Menu";
+  };
+
   menuButton.addEventListener("click", menuOpen);
+
+  aboutAssortmentNav.addEventListener("click", closeMenu);
 }
 
 checkScreenSizeMenu();
@@ -153,17 +147,18 @@ window.addEventListener("resize", checkScreenSizeMenu);
 
 // ==============================================================================
 
-if (aboutMochiNav && aboutMochiDescription) {
+if (aboutMochiNav && aboutMochiContainer) {
   const aboutMochiVisibility = () => {
     toggleClass(aboutMochiNav, "show");
+    toggleClass(aboutMochiContainer, "hidden");
     toggleClass(modalOverlay, "show");
-    toggleClass(aboutMochiDescription, "hidden");
+    toggleClass(document.body, "no-scroll");
   };
 
   aboutMochiNav.addEventListener("click", aboutMochiVisibility);
-  aboutMochiDescription.addEventListener("click", aboutMochiVisibility);
+  aboutMochiContainer.addEventListener("click", aboutMochiVisibility);
 } else {
-  document.write(`Error`);
+  console.error("Error: aboutMochiNav or aboutMochiContainer is not found");
 }
 
 // ================================================================================
@@ -194,7 +189,10 @@ const items = [
   { buttonId: "mint-chocolate-button", cardId: "mint-chocolate-card" },
   { buttonId: "mohito-button", cardId: "mohito-card" },
   { buttonId: "pistachio-button", cardId: "pistachio-card" },
-  { buttonId: "raspberry-button", cardId: "raspberry-card" },
+  {
+    buttonId: "raspberry-pistachio-button",
+    cardId: "raspberry-pistachio-card",
+  },
   { buttonId: "bubble-gum-button", cardId: "bubble-gum-card" },
   { buttonId: "pineapple-chia-button", cardId: "pineapple-chia-card" },
   { buttonId: "blueberry-lemon-button", cardId: "blueberry-lemon-card" },
@@ -209,14 +207,14 @@ items.forEach(({ buttonId, cardId }) => {
       toggleClass(card, "show");
       toggleClass(modalOverlay, "show");
       toggleClass(card, "hidden");
+      toggleClass(document.body, "no-scroll");
     };
 
     button.addEventListener("click", toggleCardVisibility);
     card.addEventListener("click", toggleCardVisibility);
   } else {
-    const errorMessage = document.createElement("div");
-    errorMessage.textContent = `The card with`;
-    errorMessage.style.color = "red";
-    document.body.appendChild(errorMessage);
+    console.error(
+      `Error: Either button with ID "${buttonId}" or card with ID "${cardId}" is not found`
+    );
   }
 });

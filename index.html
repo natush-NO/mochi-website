@@ -37,10 +37,10 @@
         <nav class="information-nav" role="navigation">
 
           <div class="menu-section">
-            <button class="menu-button menu-button--margin" id="menu-button" class="hidden">Menu</button>
-            <ul class="items-information hidden" id="items-information">
-              <li class="items-information__item" role="listitem" id="about-mochi-nav">About mochi</li>
-              <li class="items-information__item" id="about-assortment-nav" role="listitem"> <a href="#assortment">
+            <button class="menu-button menu-button--margin hidden" id="menu-button" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+            <ul class="items-information" id="items-information">
+              <li class="items-information__item" id="about-mochi-nav">About mochi</li>
+              <li class="items-information__item" id="about-assortment-nav"> <a href="#assortment-link">
                   Assortment
                 </a></li>
               <div class="section-contact">
@@ -59,13 +59,8 @@
                     </li>
                   </ul>
                 </li>
-
               </div>
-
-
-
               </li>
-
             </ul>
         </nav>
 
@@ -80,7 +75,6 @@
     <!-- ================================================================================================= -->
     <main class="page" role="main">
 
-
       <div class="page__container page__container--margin">
 
         <div class="element-mochi element-mochi--margin">
@@ -88,25 +82,41 @@
           <h2 class="element-mochi__title element-mochi__title--arabic" lang="ar" role="heading">موتشي</h2>
         </div>
 
+        <section class="about-mochi-section hidden" id="about-mochi-container">
 
+          <div class="about-mochi-section__modal-overlay">
+            <div class="container-button-close container-button-close--about-mochi">
+              <button role="button" class="close-button close-button--about-mochi" aria-label="Close">
+                <svg class="icon-x" viewBox="0 0 100 100">
+                  <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+                </svg>
+              </button>
+              <div class="about-mochi-container" role="region" id="about-mochi-description" aria-labelledby="about-mochi">
 
-        <section class="about-mochi-section about-mochi-section--margin hidden" id="about-mochi-description" role="region" aria-labelledby="about-mochi">
-          <h3 class="about-mochi-section__title">About Mochi</h3>
-          <p class="about-mochi-section__description">
-            L.Mochi is a food brand that was founded in 2024 by a single person, the founder, Ludmila. Mochi is not just a dessert; it’s a small journey into Japanese culture. Its perfect shape, delicate velvety texture, and refined taste make mochi a truly unique treat.
+                <h3 class="about-mochi-container__title">About Mochi</h3>
 
-            Today, this traditional Japanese sweet is something between ice cream and a cake. The dessert’s outer shell is made from special glutinous rice flour, called mochigome. Beneath the soft, chewy shell, you'll find a creamy mousse filling with juicy fruit fillings.
+                <p class="about-mochi-container__description">
+                  L.Mochi is a food brand that was founded in 2024 by a single person, the founder, Ludmila. Mochi is not just a dessert; it’s a small journey into Japanese culture. Its perfect shape, delicate velvety texture, and refined taste make mochi a truly unique treat.
 
-            We use only the finest natural ingredients—professional cream cheese, fresh berries and fruits, high-quality Thai rice flour, natural Belgian chocolate, and more. Our mochi contains no gluten, artificial flavorings, or GMOs.
+                  Today, this traditional Japanese sweet is something between ice cream and a cake. The dessert’s outer shell is made from special glutinous rice flour, called mochigome. Beneath the soft, chewy shell, you'll find a creamy mousse filling with juicy fruit fillings.
 
-            L.Mochi: delicate, light, and fluffy, original and extraordinary. Our mochi is entirely handmade using our own exclusive recipes.
-          </p>
+                  We use only the finest natural ingredients—professional cream cheese, fresh berries and fruits, high-quality Thai rice flour, natural Belgian chocolate, and more. Our mochi contains no gluten, artificial flavorings, or GMOs.
+
+                  L.Mochi: delicate, light, and fluffy, original and extraordinary. Our mochi is entirely handmade using our own exclusive recipes.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
         </section>
+
+
 
         <!-- ==================================================================================================================================== -->
 
         <section class="section-assortment section-assortment--margin" id="assortment" role="region" aria-labelledby="assortment">
-          <h4 class="section-assortment__title">Asortment</h4>
+          <h4 class="section-assortment__title" id="assortment-link">Asortment</h4>
           <div class="assortment-flex">
 
             <div class="assortment-product">
@@ -299,248 +309,410 @@
               </div>
               <button class="assortment-product__button" id="blueberry-lemon-button">Ingredients</button>
             </div>
-
-            <!-- ==================================================================================== -->
-
-            <div class="assortment-card hidden" id="rafaello-card">
-              <h5 class="assortment-card__title">Rafaello</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="snickers-card">
-              <h5 class="assortment-card__title">Snickers</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-
-            <div class="assortment-card hidden" id="ferrero-card">
-              <h5 class="assortment-card__title">Ferrero Roche</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="bounty-card">
-              <h5 class="assortment-card__title">Bounty</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="oreo-card">
-              <h5 class="assortment-card__title">Oreo</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="lotus-card">
-              <h5 class="assortment-card__title">Lotus</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="blueberry-brownie-card">
-              <h5 class="assortment-card__title">Blueberry brownie</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="salted-caramel-card">
-              <h5 class="assortment-card__title">Salted caramel coffee</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="passion-fruit-mango-card">
-              <h5 class="assortment-card__title">Passion fruit mango
-              </h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="mango-card">
-              <h5 class="assortment-card__title">Mango</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="kiwi-card">
-              <h5 class="assortment-card__title">Kiwi</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="blueberry-card">
-              <h5 class="assortment-card__title">Blueberry</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="strawberry-card">
-              <h5 class="assortment-card__title">Strawberry</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="strawberry-matcha-tea-card">
-              <h5 class="assortment-card__title">Strawberry matcha tea
-              </h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="raspberry-rose-card">
-              <h5 class="assortment-card__title">Raspberry rose</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="peach-card">
-              <h5 class="assortment-card__title">Peach</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="mint-chocolate-card">
-              <h5 class="assortment-card__title">Mint chocolate
-              </h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="mohito-card">
-              <h5 class="assortment-card__title">Mohito
-              </h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="pistachio-card">
-              <h5 class="assortment-card__title">Pistachio</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="raspberry-pistachio-card">
-              <h5 class="assortment-card__title">Raspberry Pistachio</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="bubble-gum-card">
-              <h5 class="assortment-card__title">Bubble gum</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="pineapple-chia-card">
-              <h5 class="assortment-card__title">Pineapple chia</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-
-            <div class="assortment-card hidden" id="blueberry-lemon-card">
-              <h5 class="assortment-card__title">Blueberry Lemon poppy seeds</h5>
-              <div class="assortment-card__image-container">
-                <img class="assortment-card__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
-              </div>
-              <p class="assortment-card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
-              </p>
-            </div>
-          </div>
         </section>
+
+        <!-- ==================================================================================== -->
+
+        <div class="assortment-cards hidden" id="rafaello-card">
+          <button role="button" class="close-button close-button--assortment" aria-label="Close">
+            <svg class="icon-x" viewBox="0 0 100 100">
+              <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+            </svg>
+          </button>
+          <div class="card-product">
+            <h5 class="card-product__title">Rafaello</h5>
+            <div class="card-product__image-container">
+              <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+            </div class>
+            <p class="card-product__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <div class="assortment-cards hidden" id="snickers-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Snickers</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
       </div>
 
-    </main>
+      <div class="assortment-cards hidden" id="ferrero-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Ferrero Roche</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="bounty-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Bounty</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="oreo-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Oreo</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="lotus-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Lotus</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="blueberry-brownie-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Blueberry brownie</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="salted-caramel-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Salted caramel coffee</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="passion-fruit-mango-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Passion fruit mango
+          </h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="mango-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Mango</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="kiwi-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Kiwi</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="blueberry-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Blueberry</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="strawberry-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Strawberry</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="strawberry-matcha-tea-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Strawberry matcha tea
+          </h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="raspberry-rose-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Raspberry rose</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="peach-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Peach</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="mint-chocolate-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Mint chocolate
+          </h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="mohito-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Mohito
+          </h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="pistachio-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Pistachio</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="raspberry-pistachio-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Raspberry Pistachio</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="bubble-gum-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Bubble gum</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="pineapple-chia-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Pineapple chia</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="assortment-cards hidden" id="blueberry-lemon-card">
+        <button role="button" class="close-button close-button--assortment" aria-label="Close">
+          <svg class="icon-x" viewBox="0 0 100 100">
+            <path d="M96.8 83.7 63.1 50l33.7-33.7c3.6-3.6 3.6-9.4 0-13.1s-9.5-3.6-13.1 0L50 36.9 16.3 3.2C12.7-.4 6.9-.4 3.2 3.2s-3.6 9.5 0 13.1L36.9 50 3.2 83.7c-3.6 3.6-3.6 9.4 0 13.1s9.5 3.6 13.1 0L50 63.1l33.7 33.7c3.6 3.6 9.4 3.6 13.1 0s3.6-9.5 0-13.1z"></path>
+          </svg>
+        </button>
+        <div class="card-product">
+          <h5 class="card-product__title">Blueberry Lemon poppy seeds</h5>
+          <div class="card-product__image-container">
+            <img class="card-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
+          </div>
+          <p class="card-product__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laudantium nisi molestiae a recusandae! Vitae aut veniam optio at repellat laborum, officiis possimus nisi non omnis amet quaerat nemo provident.
+          </p>
+        </div>
+      </div>
+  </div>
+  </div>
+
+  </main>
   </div>
 </body>
 
