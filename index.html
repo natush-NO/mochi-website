@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://lmochi.vercel.app/photo/image_link.png">
 
   <meta name="description" content="Learn about Mochi, a traditional Japanese dessert, and more.">
   <meta name="keywords" content="Mochi, Japanese dessert, sweets, food, Asian dessert">
@@ -36,32 +37,34 @@
 
         <nav class="information-nav" role="navigation">
 
-          <div class="menu-section">
-            <button class="menu-button menu-button--margin hidden" id="menu-button" aria-expanded="false" aria-label="Toggle menu">Menu</button>
-            <ul class="items-information" id="items-information">
-              <li class="items-information__item" id="about-mochi-nav">About mochi</li>
-              <li class="items-information__item" id="about-assortment-nav"> <a href="#assortment-link">
-                  Assortment
-                </a></li>
-              <div class="section-contact">
-                <li class="contact" role="contact" aria-label="Contact">Tel: +96171580977</li>
-                <li>
-                  <ul class="social-icon-items">
-                    <li class="social-icon-items__item">
-                      <a class="social-icon-items__link" href="https://www.instagram.com/lyuda_mochi?igsh=MTNtNHBseTBmaml4YQ==" target="_blank">
-                        <img class="social-icon-items__image" src="./photo/social-image/instagram_logo.svg.png" alt="Instagram logo icon">
-                      </a>
-                    </li>
-                    <li class="social-icon-items__item">
-                      <a class="social-icon-items__link" href="https://www.facebook.com/l.mochi.2024" target="_blank">
-                        <img class="social-icon-items__image" src="./photo/social-image/facebook_logo.svg.png" alt="Facebook logo icon">
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </div>
+          <button class="menu-button menu-button--margin hidden" id="menu-button" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+          <ul class="items-information" id="items-information">
+            <li class="items-information__item" id="about-mochi-nav">About mochi</li>
+            <li class="items-information__item" id="about-assortment-nav">
+              <a href="#assortment-link">
+                Assortment
+              </a>
+            </li>
+            <div class="section-contact">
+              <li class="contact" role="contact" aria-label="Contact">Tel: +96171580977</li>
+              <li>
+                <ul class="social-icon-items">
+                  <li class="social-icon-items__item">
+                    <a class="social-icon-items__link" href="https://www.instagram.com/lyuda_mochi?igsh=MTNtNHBseTBmaml4YQ==" target="_blank">
+                      <img class="social-icon-items__image" src="./photo/social-image/instagram_logo.svg.png" alt="Instagram logo icon">
+                    </a>
+                  </li>
+                  <li class="social-icon-items__item">
+                    <a class="social-icon-items__link" href="https://www.facebook.com/l.mochi.2024" target="_blank">
+                      <img class="social-icon-items__image" src="./photo/social-image/facebook_logo.svg.png" alt="Facebook logo icon">
+                    </a>
+                  </li>
+                </ul>
               </li>
-            </ul>
+            </div>
+            </li>
+          </ul>
+
         </nav>
 
         <div class="element-subtitle">
@@ -76,14 +79,12 @@
     <main class="page" role="main">
 
       <div class="page__container page__container--margin">
-
         <div class="element-mochi element-mochi--margin">
           <h1 class="element-mochi__title element-mochi__title--englisch" role="heading">L.Mochi</h1>
           <h2 class="element-mochi__title element-mochi__title--arabic" lang="ar" role="heading">موتشي</h2>
         </div>
 
         <section class="about-mochi-section hidden" id="about-mochi-container">
-
           <div class="about-mochi-section__modal-overlay">
             <div class="container-button-close container-button-close--about-mochi">
               <button role="button" class="close-button close-button--about-mochi" aria-label="Close">
@@ -92,9 +93,7 @@
                 </svg>
               </button>
               <div class="about-mochi-container" role="region" id="about-mochi-description" aria-labelledby="about-mochi">
-
                 <h3 class="about-mochi-container__title">About Mochi</h3>
-
                 <p class="about-mochi-container__description">
                   L.Mochi is a food brand that was founded in 2024 by a single person, the founder, Ludmila. Mochi is not just a dessert; it’s a small journey into Japanese culture. Its perfect shape, delicate velvety texture, and refined taste make mochi a truly unique treat.
 
@@ -106,17 +105,18 @@
                 </p>
               </div>
             </div>
-
           </div>
-
         </section>
+      </div>
 
 
+      <!-- ==================================================================================================================================== -->
 
-        <!-- ==================================================================================================================================== -->
+      <div class="assortment-section__container">
 
         <section class="section-assortment section-assortment--margin" id="assortment" role="region" aria-labelledby="assortment">
           <h4 class="section-assortment__title" id="assortment-link">Asortment</h4>
+
           <div class="assortment-flex">
 
             <div class="assortment-product">
@@ -124,7 +124,7 @@
               <div class="assortment-product__image-container">
                 <img class="assortment-product__image" src="./photo/elementor-placeholder-image.webp" alt="Placeholder">
               </div>
-              <button class="assortment-product__button" id="rafaello-button">Ingredients</button>
+              <button class="assortment-product__button" id="rafaello-button" aria-expanded="false">Ingredients</button>
             </div>
 
             <div class="assortment-product">
@@ -309,7 +309,9 @@
               </div>
               <button class="assortment-product__button" id="blueberry-lemon-button">Ingredients</button>
             </div>
+          </div>
         </section>
+
 
         <!-- ==================================================================================== -->
 
@@ -330,7 +332,6 @@
           </div>
         </div>
       </div>
-      <!-- </div> -->
 
       <div class="assortment-cards hidden" id="snickers-card">
         <button role="button" class="close-button close-button--assortment" aria-label="Close">
@@ -709,11 +710,13 @@
           </p>
         </div>
       </div>
-  </div>
+
   </div>
 
   </main>
+
   </div>
+
 </body>
 
 </html>

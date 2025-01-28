@@ -123,10 +123,12 @@ if (menuButton && itemsInformation) {
       itemsInformation.classList.remove("show");
       modalOverlay.classList.remove("show");
       menuButton.textContent = "Menu";
+      menuButton.setAttribute("aria-expanded", "false");
     } else {
       itemsInformation.classList.add("show");
       modalOverlay.classList.add("show");
       menuButton.textContent = "Close";
+      menuButton.setAttribute("aria-expanded", "true");
     }
   };
 
@@ -134,6 +136,7 @@ if (menuButton && itemsInformation) {
     itemsInformation.classList.remove("show");
     modalOverlay.classList.remove("show");
     menuButton.textContent = "Menu";
+    menuButton.setAttribute("aria-expanded", "false");
   };
 
   menuButton.addEventListener("click", menuOpen);
@@ -208,6 +211,9 @@ items.forEach(({ buttonId, cardId }) => {
       toggleClass(modalOverlay, "show");
       toggleClass(card, "hidden");
       toggleClass(document.body, "no-scroll");
+
+      const isExpanded = card.classList.contains("show");
+      button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
     };
 
     button.addEventListener("click", toggleCardVisibility);
