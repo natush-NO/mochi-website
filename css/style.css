@@ -623,6 +623,7 @@ body:after {
 
 .assortment-product__button {
   max-width: 150px;
+  color: #451f3e;
   font-size: 22px;
   padding: 10px;
   -webkit-transition: background-color 0.4s ease, color 0.3s ease;
