@@ -323,8 +323,8 @@ body:after {
 }
 @media (hover: hover) {
   .social-icon-items__link:hover {
-    -webkit-box-shadow: 1px 1px 10px 3px rgba(134, 62, 121, 0.442), -1px -1px 10px 3px rgba(134, 62, 121, 0.442);
-            box-shadow: 1px 1px 10px 3px rgba(134, 62, 121, 0.442), -1px -1px 10px 3px rgba(134, 62, 121, 0.442);
+    -webkit-box-shadow: 1px 1px 6px 2px rgba(134, 62, 121, 0.442), -1px -1px 6px 2px rgba(134, 62, 121, 0.442);
+            box-shadow: 1px 1px 6px 2px rgba(134, 62, 121, 0.442), -1px -1px 6px 2px rgba(134, 62, 121, 0.442);
     border-radius: 40%;
     opacity: 0.6;
   }

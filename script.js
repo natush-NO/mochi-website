@@ -234,15 +234,17 @@ items.forEach(({ productId, cardId }) => {
     product.addEventListener("click", toggleCardVisibility);
     card.addEventListener("click", toggleCardVisibility);
 
-    product.addEventListener("mouseenter", () => {
-      button.style.boxShadow =
-        "1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
-    });
+    if (window.matchMedia("(hover: hover)").matches) {
+      product.addEventListener("mouseenter", () => {
+        button.style.boxShadow =
+          "1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
+      });
 
-    product.addEventListener("mouseleave", () => {
-      button.style.boxShadow =
-        "1px 1px 15px 3px rgba(255, 255, 255, 1), -1px -1px 15px 3px rgba(255, 255, 255, 1), inset 1px 1px 10px 1px rgba(134, 62, 121, 0.262), inset -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
-    });
+      product.addEventListener("mouseleave", () => {
+        button.style.boxShadow =
+          "1px 1px 15px 3px rgba(255, 255, 255, 1), -1px -1px 15px 3px rgba(255, 255, 255, 1), inset 1px 1px 10px 1px rgba(134, 62, 121, 0.262), inset -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
+      });
+    }
   } else {
     console.error(
       `Error: Either product "${productId}", card "${cardId}" or button is not found`
