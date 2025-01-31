@@ -16,88 +16,94 @@ const modalOverlay = document.getElementById("modalOverlay");
 
 // ===============================================================
 
-const rafaelloButton = document.getElementById("rafaello-button");
+const rafaelloProduct = document.getElementById("rafaello-product");
 const rafaelloCard = document.getElementById("rafaello-card");
 
-const snickersButton = document.getElementById("snickers-button");
+const snickersProduct = document.getElementById("snickers-product");
 const snickersCard = document.getElementById("snickers-card");
 
-const ferreroButton = document.getElementById("ferrero-button");
+const ferreroProduct = document.getElementById("ferrero-product");
 const ferreroCard = document.getElementById("ferrero-card");
 
-const bountyButton = document.getElementById("bounty-button");
+const bountyProduct = document.getElementById("bounty-product");
 const bountyCard = document.getElementById("bounty-card");
 
-const oreoButton = document.getElementById("oreo-button");
+const oreoProduct = document.getElementById("oreo-product");
 const oreoCard = document.getElementById("oreo-card");
 
-const lotusButton = document.getElementById("lotus-button");
+const lotusProduct = document.getElementById("lotus-product");
 const lotusCard = document.getElementById("lotus-card");
 
-const blueberryBrownieButton = document.getElementById(
-  "blueberry-brownie-button"
+const blueberryBrownieProduct = document.getElementById(
+  "blueberry-brownie-product"
 );
 const blueberryBrownieCard = document.getElementById("blueberry-brownie-card");
 
-const saltedCaramelButton = document.getElementById("salted-caramel-button");
+const saltedCaramelProduct = document.getElementById("salted-caramel-product");
 const saltedCaramelCard = document.getElementById("salted-caramel-card");
 
-const passionFruitMangoButton = document.getElementById(
-  "passion-fruit-mango-button"
+const passionFruitMangoProduct = document.getElementById(
+  "passion-fruit-mango-product"
 );
 const passionFruitMangoCard = document.getElementById(
   "passion-fruit-mango-card"
 );
 
-const mangoButton = document.getElementById("mango-button");
+const mangoProduct = document.getElementById("mango-product");
 const mangoCard = document.getElementById("mango-card");
 
-const kiwiButton = document.getElementById("kiwi-button");
+const kiwiProduct = document.getElementById("kiwi-product");
 const kiwiCard = document.getElementById("kiwi-card");
 
-const blueberryButton = document.getElementById("blueberry-button");
+const blueberryProduct = document.getElementById("blueberry-product");
 const blueberryCard = document.getElementById("blueberry-card");
 
-const strawberryButton = document.getElementById("strawberry-button");
+const strawberryProduct = document.getElementById("strawberry-product");
 const strawberryCard = document.getElementById("strawberry-card");
 
-const strawberryMatchaTeaButton = document.getElementById(
-  "strawberry-matcha-tea-button"
+const strawberryMatchaTeaProduct = document.getElementById(
+  "strawberry-matcha-tea-product"
 );
 const strawberryMatchaTeaCard = document.getElementById(
   "strawberry-matcha-tea-card"
 );
 
-const raspberryRoseButton = document.getElementById("raspberry-rose-button");
+const raspberryRoseProduct = document.getElementById("raspberry-rose-product");
 const raspberryRoseCard = document.getElementById("raspberry-rose-card");
 
-const peachButton = document.getElementById("peach-button");
+const peachProduct = document.getElementById("peach-product");
 const peachCard = document.getElementById("peach-card");
 
-const mintChocolateButton = document.getElementById("mint-chocolate-button");
+const mintChocolateProduct = document.getElementById("mint-chocolate-product");
 const mintChocolateCard = document.getElementById("mint-chocolate-card");
 
-const mohitoButton = document.getElementById("mohito-button");
+const mohitoProduct = document.getElementById("mohito-product");
 const mohitoCard = document.getElementById("mohito-card");
 
-const pistachioButton = document.getElementById("pistachio-button");
+const pistachiProduct = document.getElementById("pistachio-product");
 const pistachioCard = document.getElementById("pistachio-card");
 
-const raspberryPistachioButton = document.getElementById(
-  "raspberry-pistachio-button"
+const raspberryPistachiProduct = document.getElementById(
+  "raspberry-pistachio-product"
 );
 const raspberryPistachioCard = document.getElementById(
   "raspberry-pistachio-card"
 );
 
-const bubbleGumButton = document.getElementById("bubble-gum-button");
+const bubbleGumProduct = document.getElementById("bubble-gum-product");
 const bubbleGumCard = document.getElementById("bubble-gum-card");
 
-const pineappleChiaButton = document.getElementById("pineapple-chia-button");
+const pineappleChiaProduct = document.getElementById("pineapple-chia-product");
 const pineappleChiaCard = document.getElementById("pineapple-chia-card");
 
-const blueberryLemonButton = document.getElementById("blueberry-lemon-button");
+const blueberryLemonProduct = document.getElementById(
+  "blueberry-lemon-product"
+);
 const blueberryLemonCard = document.getElementById("blueberry-lemon-card");
+
+const buttonAssortment = document.querySelectorAll(
+  '[data-js="button-assortment"]'
+);
 
 // ==============================================================================
 
@@ -167,45 +173,54 @@ if (aboutMochiNav && aboutMochiContainer) {
 // ================================================================================
 
 const items = [
-  { buttonId: "rafaello-button", cardId: "rafaello-card" },
-  { buttonId: "snickers-button", cardId: "snickers-card" },
-  { buttonId: "ferrero-button", cardId: "ferrero-card" },
-  { buttonId: "bounty-button", cardId: "bounty-card" },
-  { buttonId: "oreo-button", cardId: "oreo-card" },
-  { buttonId: "lotus-button", cardId: "lotus-card" },
-  { buttonId: "blueberry-brownie-button", cardId: "blueberry-brownie-card" },
-  { buttonId: "salted-caramel-button", cardId: "salted-caramel-card" },
+  { productId: "rafaello-product", cardId: "rafaello-card" },
+  { productId: "snickers-product", cardId: "snickers-card" },
+  { productId: "ferrero-product", cardId: "ferrero-card" },
+  { productId: "bounty-product", cardId: "bounty-card" },
+  { productId: "oreo-product", cardId: "oreo-card" },
+  { productId: "lotus-product", cardId: "lotus-card" },
+  { productId: "blueberry-brownie-product", cardId: "blueberry-brownie-card" },
+  { productId: "salted-caramel-product", cardId: "salted-caramel-card" },
   {
-    buttonId: "passion-fruit-mango-button",
+    productId: "passion-fruit-mango-product",
     cardId: "passion-fruit-mango-card",
   },
-  { buttonId: "mango-button", cardId: "mango-card" },
-  { buttonId: "kiwi-button", cardId: "kiwi-card" },
-  { buttonId: "blueberry-button", cardId: "blueberry-card" },
-  { buttonId: "strawberry-button", cardId: "strawberry-card" },
+  { productId: "mango-product", cardId: "mango-card" },
+  { productId: "kiwi-product", cardId: "kiwi-card" },
+  { productId: "blueberry-product", cardId: "blueberry-card" },
+  { productId: "strawberry-product", cardId: "strawberry-card" },
   {
-    buttonId: "strawberry-matcha-tea-button",
+    productId: "strawberry-matcha-tea-product",
     cardId: "strawberry-matcha-tea-card",
   },
-  { buttonId: "raspberry-rose-button", cardId: "raspberry-rose-card" },
-  { buttonId: "peach-button", cardId: "peach-card" },
-  { buttonId: "mint-chocolate-button", cardId: "mint-chocolate-card" },
-  { buttonId: "mohito-button", cardId: "mohito-card" },
-  { buttonId: "pistachio-button", cardId: "pistachio-card" },
+  { productId: "raspberry-rose-product", cardId: "raspberry-rose-card" },
+  { productId: "peach-product", cardId: "peach-card" },
+  { productId: "mint-chocolate-product", cardId: "mint-chocolate-card" },
+  { productId: "mohito-product", cardId: "mohito-card" },
+  { productId: "pistachio-product", cardId: "pistachio-card" },
   {
-    buttonId: "raspberry-pistachio-button",
+    productId: "raspberry-pistachio-product",
     cardId: "raspberry-pistachio-card",
   },
-  { buttonId: "bubble-gum-button", cardId: "bubble-gum-card" },
-  { buttonId: "pineapple-chia-button", cardId: "pineapple-chia-card" },
-  { buttonId: "blueberry-lemon-button", cardId: "blueberry-lemon-card" },
+  { productId: "bubble-gum-product", cardId: "bubble-gum-card" },
+  {
+    productId: "pineapple-chia-product",
+    cardId: "pineapple-chia-card",
+  },
+  {
+    productId: "blueberry-lemon-product",
+    cardId: "blueberry-lemon-card",
+  },
 ];
 
-items.forEach(({ buttonId, cardId }) => {
-  const button = document.getElementById(buttonId);
+items.forEach(({ productId, cardId }) => {
+  const product = document.getElementById(productId);
   const card = document.getElementById(cardId);
+  const button = document.querySelector(
+    `[data-js="button-assortment"][data-product="${productId}"]`
+  );
 
-  if (button && card) {
+  if (product && card && button) {
     const toggleCardVisibility = () => {
       toggleClass(card, "show");
       toggleClass(modalOverlay, "show");
@@ -213,14 +228,24 @@ items.forEach(({ buttonId, cardId }) => {
       toggleClass(document.body, "no-scroll");
 
       const isExpanded = card.classList.contains("show");
-      button.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+      product.setAttribute("aria-expanded", isExpanded ? "true" : "false");
     };
 
-    button.addEventListener("click", toggleCardVisibility);
+    product.addEventListener("click", toggleCardVisibility);
     card.addEventListener("click", toggleCardVisibility);
+
+    product.addEventListener("mouseenter", () => {
+      button.style.boxShadow =
+        "1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
+    });
+
+    product.addEventListener("mouseleave", () => {
+      button.style.boxShadow =
+        "1px 1px 15px 3px rgba(255, 255, 255, 1), -1px -1px 15px 3px rgba(255, 255, 255, 1), inset 1px 1px 10px 1px rgba(134, 62, 121, 0.262), inset -1px -1px 10px 1px rgba(134, 62, 121, 0.262)";
+    });
   } else {
     console.error(
-      `Error: Either button with ID "${buttonId}" or card with ID "${cardId}" is not found`
+      `Error: Either product "${productId}", card "${cardId}" or button is not found`
     );
   }
 });
