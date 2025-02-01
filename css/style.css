@@ -42,30 +42,30 @@ h6 {
 html,
 body {
   line-height: 1;
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
-  background: url("../photo/image_body.webp") no-repeat;
   background-size: cover;
   font-family: "Aladin", "Arizonia", sans-serif;
   color: #451f3e;
-  background-repeat: repeat;
+  position: relative;
+  z-index: 100;
 }
 
 body:after {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: var(--body-height);
   background-color: rgba(254, 246, 247, 0.726);
   z-index: -1;
 }
 
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,6 +74,20 @@ body:after {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: clip;
+  position: relative;
+}
+
+.wrapper:after {
+  content: "";
+  background: url("../photo/image_body.jpg") no-repeat;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-repeat: repeat;
+  z-index: -2;
 }
 
 [class*=__container] {
@@ -587,8 +601,8 @@ body:after {
 }
 @media (hover: hover) {
   .assortment-product:hover {
-    -webkit-box-shadow: 1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262);
-            box-shadow: 1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262);
+    -webkit-box-shadow: 1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262), inset 1px 1px 2px 1px rgba(134, 62, 121, 0.262), inset -1px -1px 2px 1px rgba(134, 62, 121, 0.262);
+            box-shadow: 1px 1px 10px 1px rgba(134, 62, 121, 0.262), -1px -1px 10px 1px rgba(134, 62, 121, 0.262), inset 1px 1px 2px 1px rgba(134, 62, 121, 0.262), inset -1px -1px 2px 1px rgba(134, 62, 121, 0.262);
     cursor: pointer;
   }
 }
